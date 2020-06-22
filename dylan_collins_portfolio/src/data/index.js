@@ -1,7 +1,7 @@
 import activity from '../Images/activities.png'
 import signup from '../Images/signup.png';
 import settings from '../Images/settings.png';
-import dashboard from '../Images/dashboard.png';
+import dashboard from '../Images/dashboard2.png';
 
 export const projects = [
     {
