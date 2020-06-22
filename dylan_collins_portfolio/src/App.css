@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+  overflow: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.mainPage {
+  color: white; 
+  width: 100vw; 
+  height: 100vh; 
+  background: linear-gradient(210.51deg, #00B5C0 -9.03%, #004DC0 84.58%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.125rem;
+  line-height: 34px;
+}
+
+.name {
+  font-size: 3rem;
+}
+
+.nav {
+  font-size: 2rem;
+}
+
+.breakPoint{
+  background: linear-gradient(210.51deg, #00B5C0 -9.03%, #004DC0 84.58%);
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  line-height: 2.5rem;
+}
+
+.intro{
+  height: 75vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0rem 20rem;
+  white-space: pre-line;
+  font-family: 'Cairo', sans-serif;
+}
+
+.footer{
+  height: 30vh;
+  background-color: #2B2F32;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.photo {
+  height: 200px;
+  width: 200px;
+  border-radius: 100rem;
+}
+
+.right-footer{
+ display: flex;
+ justify-content: space-evenly;
+ width: 50vh;
+ text-align: left;
+ line-height: 2.5rem;
+}
+
+.link{
+  color: white;
+  text-decoration: none;
+}
+
+.link:visited{
+  color: white;
+  text-decoration: none;
+}
+
+.link:hover{
+  color: #004DC0;
+}
+
+.images {  
+  box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.12);;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.resume{
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px; 
+  width: 10vw;
+  color: #EFEFEF;
+  text-decoration: none;
+  padding: .5rem 2rem;
+}
+
+.blue-line{
+  background: #016DC1;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  height: .2rem;
+  width: 85%;
+  margin-bottom: 3rem;
+}
+
+.photo-div{
+  width: 25vw;
+  text-align: right;
+  padding-right: 5rem;
+}
+.div-resume{
+  padding: 0rem 3rem;
+   position: absolute;
+   left: 80vw;
+    top: 90vh;
+}
+
+.footer-left{
+  text-align: left; 
+  padding: 1rem 4rem; 
+}
+
+.follow-div{
+  display: flex; 
+  flex-direction: column; 
+}
+
+.more-div{
+  width: 50% ;
+  border: yellow solid 2px;
+}
+
+.column-photos{
+  display: flex; 
+  flex-direction: column; 
+  margin: 0rem 1rem; 
+  justify-content: space-between;
+}
+
+.image1{
+  width: 70%;
+  border-radius: .3rem;
+}
+
+.project-left{
+  width: 57vw;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  padding: 2rem;
+  height: 100%;
+}
+
+.project-right{
+  width: 30vw;
+  padding: 2rem 1rem
+}
+
+.vd-button{
+  border-radius: .3rem; 
+  width: 10vw;
+  border: 1px solid #004DC0; 
+  margin: 2rem 1rem 0rem 0rem;
+  padding: .3rem 0rem;
+}
+
+.gh-button {
+  background-color: #004DC0; 
+  border-radius: .3rem; 
+  width: 10vw;
+  margin:2rem 1rem 0rem 0rem; 
+  padding: .3rem 0rem;
+}
+
+.color-div{
+  display: flex;
+  height: 3%; 
+  padding-bottom: 1.8rem; 
+}
+
+.main-projects-div{
+  background-color: #F4F4F4;
+  margin: 1rem 1.5rem; 
+  height: 90vh; 
+  border-radius: .5rem; 
+  display: flex; 
+  color: #51595F;
+}
+
+.project-description{
+  padding-top: 3rem; 
+  text-align: left; 
+}
+
+.button-div{
+  display: flex;
+}
+
+@media (max-width:1280px){
+  .div-resume{
+    left: 75vw
+  }
+}
+
+@media (max-width:1250px){
+  .intro{
+    width:70vw;
+    padding-left: 11rem;
+  }
+}
+
+@media (max-width:1050px){
+  .column-photos{
+    display: none;
+  }
+  .image1{
+    width: 100%;
+  }
+  .project-left{
+    width: 45vw;
+  }
+  .project-right{
+    width: 40vw;
+  }
+  .button-div{
+    justify-content: center;
+  }
+  .gh-button{
+    width: 15vw;
+  }
+  .vd-button{
+    width: 15vw;
+  }
+}
+
+@media (max-width:1020px){
+  .div-resume{
+    left: 70vw
+  }
+  .blue-line{
+    display: none;
+  }
+}
+
+@media (max-width:850px){
+  .intro{
+    flex-direction: column;
+    align-items: center;
+    padding-left: 8rem;
+  }
+  .photo-div{
+    margin-bottom: -7rem;
+  }
+  .div-resume{
+    left: 65vw
+  }
+}
+@media (max-width:800px){
+  .color-div{
+    display: none;
+  }
+  .main-projects-div{
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-left{
+    margin-top: -2rem;
+    width: 90%;
+  }
+  .project-right {
+    margin-top: -10rem;
+    width: 100%;
+    align-items: center;
+  }
+  .project-description{
+    width: 100%;
+    padding-top: 0rem; 
+    text-align: center;
+  }
+  .main-projects-div{
+    padding:1rem;
+  }
+  .button-div{
+    padding: 0rem
+  }
+
+} 
+
+@media (max-width:730px){
+  .div-resume{
+    left: 60vw
+  }
+  .project-description{
+    padding-top: 1rem; 
+  }
+  .vd-button{
+    width: 50vw;
+  }
+  .gh-button{
+    width: 50vw;
+  }
+}
+
+
+@media (max-width:676px){
+  .project-description{
+    padding-top: 2rem; 
+  }
+}
+
+@media (max-width:640px){
+  .div-resume{
+    left: 55vw
+  }
+}
+
+@media (max-width:600px){
+  .intro{
+    padding-left: 5rem;
+  }
+  .div-resume{
+    left: 28vw
+  }
+  .footer-name{
+    display: none;
+  }
+  .footer-left{
+    padding: 1rem 3rem; 
+  }
+}
+
+@media (max-width:550px){
+  .footer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .links2{
+    margin: 2rem 0rem;
+    padding-left: .5rem;
+  }
+  .links3{
+    border-right: white 1px solid;
+    padding-right: .5rem;
+  }
+  .footer-left{
+    order: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .right-footer{
+    order: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .follow{
+    display: none;
+  }
+  .more{
+    display: none;
+  }
+  .follow-div{
+    flex-direction: row;
+    justify-content: center;
+  }
+  .p-tag{
+    order:10;
+  }
+  .p-tag2{
+    order:0;
+  }
+  .project-description{
+    padding-top: 4rem; 
+  }
+}
+
+@media (max-width:500px){
+  .photo-div{
+    margin-left: -2rem;
+    padding: .5rem;
+  }
+  .div-resume{
+    left: 25vw
+  }
+}
+
+
+  /* .button-div{
+    flex-direction: column;
+    align-items: center;
+  } */
