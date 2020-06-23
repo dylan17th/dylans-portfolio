@@ -8,7 +8,7 @@ const Footer = () => {
                 <h3 className='footer-name' style={{ paddingBottom: '1rem' }}>Dylan Collins</h3>
                 <div className='blue-line'></div>
                 <p className='p-tag'>Copyright {'\u00a9'} 2020 Dylan Collins. All rights reserved.</p>
-                <p className='p-tag2' style={{ fontSize: '.8rem', color: '#BEBEBE' }}>Coded by Dylan Collins, designed by <a style={{ color: '#004DC0', textDecoration: 'underline' }} href='#'>Marc Dandoy</a></p>
+                <p className='p-tag2' style={{ fontSize: '.8rem', color: '#BEBEBE' }}>Coded by Dylan Collins, designed by <a style={{ color: '#004DC0', textDecoration: 'underline' }} target="_blank" href='http://www.mdandoy.me/'>Marc Dandoy</a></p>
             </section>
             <div className='right-footer'>
                 <section style={{ width: '50%' }}>
