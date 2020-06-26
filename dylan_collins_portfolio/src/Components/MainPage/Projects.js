@@ -6,7 +6,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 const Projects = () => {
     console.log(projects)
     return (
-        <div style={{ height: '289vh' }}>
+        <div style={{ height: '240vh' }}>
             <div>
                 {projects.map(project => (
                     <div className='main-projects-div' key={project.name} >
@@ -21,6 +21,12 @@ const Projects = () => {
                                     <img src={project.photos[3]} className='images' style={{ width: '100%', height: '30%', borderRadius: '.3rem' }} />
                                 </div>
                             </section>
+                            <section className='tech-section'>
+                                <h4>Technologies used:</h4>
+                                <div style={{ display: 'flex' }}>
+                                    {project.tech.map(tech => (<div key={tech} className='tech'>{tech}</div>))}
+                                </div>
+                            </section>
                         </section>
                         <section className='project-right'>
                             <h2 className='color-div' >
@@ -30,7 +36,8 @@ const Projects = () => {
                                 <div style={{ backgroundColor: project.colors[2], width: '14.7%' }} className='logo'></div>
                                 <div style={{ backgroundColor: project.colors[3], width: '15%' }} className='logo'></div>
                             </h2>
-                            <p className='project-description' >{project.description}</p>
+                            <div className='project-description'>Role: {project.role}</div>
+                            <p className='project-description1'>{project.description}</p>
                             <div className='button-div'>
                                 <div className='vd-button' ><a className='visit directly' style={{ color: '#004DC0', textDecoration: 'none' }} target="_blank" href={project.URL[0]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Directly</a></div>
                                 <div className='gh-button' ><a className='visit github' style={{ color: 'white', textDecoration: 'none' }} target="_blank" href={project.URL[1]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Github</a></div>

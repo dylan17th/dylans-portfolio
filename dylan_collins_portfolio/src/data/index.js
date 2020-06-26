@@ -15,39 +15,31 @@ export const projects = [
         ],
         "description": "MySchool is a portfolio-building app for parents and students participating in homeschooling activities. We make it quick and easy to add schoolwork examples or activity information to a printable PDF. Based on the Maryland state requirements for homeschoolers, MySchool keeps materials organized for a successful submission to educational authorities.",
         "toppart": "image.png",
-        "URL": [ 
-            "https://www.myschool-v1.com/", 
-            "https://github.com/Lambda-School-Labs/My-School-FE" 
+        "URL": [
+            "https://www.myschool-v1.com/",
+            "https://github.com/dylan17th/My-School-FE"
         ],
         "colors": [
             "#2A4365",
             "#FFBB00",
             "#FB6542",
             "#375E97"
-        ]
-    },
-    {
-        "name": "Expat-Journal",
-        "subtitle": "Academic portfolio building tool",
-        "photos": [
-            dashboard,
-            activity,
-            signup,
-            settings,
         ],
-        "description": "MySchool is a portfolio-building app for parents and students participating in homeschooling activities. We make it quick and easy to add schoolwork examples or activity information to a printable PDF. Based on the Maryland state requirements for homeschoolers, MySchool keeps materials organized for a successful submission to educational authorities.",
-        "toppart": "image.png",
-        "URL": "https://www.myschool-v1.com/",
-        "colors": [
-            "#2A4365",
-            "#FFBB00",
-            "#FB6542",
-            "#375E97"
+        "role": "Full Stack Web Developer",
+        "tech": [
+            "Node",
+            "React",
+            "Redux",
+            "Express",
+            "Cloudinary",
+            "AWS",
+            "Postgres",
+            "Chakra"
         ]
     },
     {
         "name": "Python Project",
-        "subtitle": "Academic portfolio building tool",
+        "subtitle": "Maze game",
         "photos": [
             dashboard,
             activity,
@@ -58,10 +50,15 @@ export const projects = [
         "toppart": "image.png",
         "URL": "https://www.myschool-v1.com/",
         "colors": [
-            "#2A4365",
-            "#FFBB00",
-            "#FB6542",
-            "#375E97"
+            "black",
+            "green",
+            "darkGrey",
+            "Black"
+        ],
+        "role": "Python Developer",
+        "tech": [
+            "Python",
+            "Django",
         ]
-    },
+    }
 ]

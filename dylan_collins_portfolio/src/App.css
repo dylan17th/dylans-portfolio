@@ -202,7 +202,7 @@
 .main-projects-div{
   background-color: #F4F4F4;
   margin: 1rem 1.5rem; 
-  height: 90vh; 
+  height: 110vh; 
   border-radius: .5rem; 
   display: flex; 
   color: #51595F;
@@ -210,11 +210,27 @@
 
 .project-description{
   padding-top: 3rem; 
+  font-weight: bold;
+  text-align: left; 
+}
+
+.project-description1{
   text-align: left; 
 }
 
 .button-div{
   display: flex;
+}
+
+.tech{
+  padding: 0rem 1rem;
+}
+
+.tech-section{
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  color: light-grey; 
 }
 
 @media (max-width:1280px){
@@ -277,6 +293,9 @@
   }
 }
 @media (max-width:800px){
+  .tech-section{
+    display: none;
+  }
   .color-div{
     display: none;
   }
