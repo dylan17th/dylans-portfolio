@@ -22,7 +22,7 @@ const Projects = () => {
                                 </div>
                             </section>
                             <section className='tech-section'>
-                                <h4>Technologies used:</h4>
+                                <h4 className='techHeading'>Technologies used:</h4>
                                 <div style={{ display: 'flex' }}>
                                     {project.tech.map(tech => (<div key={tech} className='tech'>{tech}</div>))}
                                 </div>
