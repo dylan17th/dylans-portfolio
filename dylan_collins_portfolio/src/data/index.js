@@ -37,28 +37,28 @@ export const projects = [
             "Chakra"
         ]
     },
-    {
-        "name": "Python Project",
-        "subtitle": "Maze game",
-        "photos": [
-            dashboard,
-            activity,
-            signup,
-            settings,
-        ],
-        "description": "MySchool is a portfolio-building app for parents and students participating in homeschooling activities. We make it quick and easy to add schoolwork examples or activity information to a printable PDF. Based on the Maryland state requirements for homeschoolers, MySchool keeps materials organized for a successful submission to educational authorities.",
-        "toppart": "image.png",
-        "URL": "https://www.myschool-v1.com/",
-        "colors": [
-            "black",
-            "green",
-            "darkGrey",
-            "Black"
-        ],
-        "role": "Python Developer",
-        "tech": [
-            "Python",
-            "Django",
-        ]
-    }
+    // {
+    //     "name": "Python Project",
+    //     "subtitle": "Maze game",
+    //     "photos": [
+    //         dashboard,
+    //         activity,
+    //         signup,
+    //         settings,
+    //     ],
+    //     "description": "MySchool is a portfolio-building app for parents and students participating in homeschooling activities. We make it quick and easy to add schoolwork examples or activity information to a printable PDF. Based on the Maryland state requirements for homeschoolers, MySchool keeps materials organized for a successful submission to educational authorities.",
+    //     "toppart": "image.png",
+    //     "URL": "https://www.myschool-v1.com/",
+    //     "colors": [
+    //         "black",
+    //         "green",
+    //         "darkGrey",
+    //         "Black"
+    //     ],
+    //     "role": "Python Developer",
+    //     "tech": [
+    //         "Python",
+    //         "Django",
+    //     ]
+    // }
 ]

@@ -6,7 +6,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 const Projects = () => {
     console.log(projects)
     return (
-        <div style={{ height: '240vh' }}>
+        <div style={{ height: '125vh' }}>
             <div>
                 {projects.map(project => (
                     <div className='main-projects-div' key={project.name} >
