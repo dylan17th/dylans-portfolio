@@ -17,7 +17,7 @@ export const projects = [
             signup,
             settings,
         ],
-        "description": "MySchool is a portfolio-building app for parents and students participating in homeschooling activities. We make it quick and easy to add schoolwork examples or activity information to a printable PDF. Based on the Maryland state requirements for homeschoolers, MySchool keeps materials organized for a successful submission to educational authorities.",
+        "description": "MySchool is a portfolio-building app for parents and students participating in homeschooling activities. We make it quick and easy to add schoolwork examples or activity information to a printable PDF.",
         "toppart": "image.png",
         "URL": [
             "https://www.myschool-v1.com/",
