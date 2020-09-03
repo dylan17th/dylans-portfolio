@@ -1,7 +1,7 @@
 # My Portfolio
 
 ### Project Description
-this is a description for my portfolio
+My portfolio contains projects and information that make it easy for hiring managers to view my work/contact me.
 
 ### Functionality
  - View my resume with the click of a button in a seperate window
