@@ -5,8 +5,8 @@ this is a description for my portfolio
 
 ### Functionality
  - View my resume with the click of a button in a seperate window
- - Ablity to view project I am most proud of
- - ALinks to my github and linkedIn
+ - Ablity to view the projects I am most proud of
+ - Links to my github and linkedIn
  - Abilty to email me with the click of a button
 
 ### Status
