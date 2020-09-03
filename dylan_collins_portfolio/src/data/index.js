@@ -61,7 +61,11 @@ export const projects = [
         ],
         "role": "Front-end Developer",
         "tech": [
-            "React"
+            "React",
+            "CSS",
+            "Vercel",
+            "Git", 
+            "Github"
         ]
     }
 ]
