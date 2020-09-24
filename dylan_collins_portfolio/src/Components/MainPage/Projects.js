@@ -1,52 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-modal';
+import { styled } from '@material-ui/core/styles';
 import { projects } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleRight, faArrowCircleLeft, faTimesCircle, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import Button from '@material-ui/core/Button';
 
-const Projects = () => {
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        height: "85vh",
+        width: "80vw",
+        overflowX: "hidden",
+        display: "flex",
+        flexDirection: "column"
+    }
+};
+
+const Exit = styled(Button)({
+    width: "5vw"
+});
+
+
+const Pros = ({ setIsOpen, modalIsOpen }) => {
+    const [myProjects, setProjects] = useState(projects);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const closeModal = () => {
+        setIsOpen(false);
+    }
+
     return (
-        <div style={{ height: '235vh' }}>
-            <div>
-                {projects.map(project => (
-                    <div className='main-projects-div' key={project.name} >
-                        <section className='project-left'>
-                            <h2>{project.name}</h2>
-                            <div>{project.subtitle}</div>
-                            <section style={{ display: 'flex', height: '55%', padding: '2rem 0rem' }}>
-                                <img src={project.photos[0]} className='images image1' />
-                                <div className='column-photos'>
-                                    <img src={project.photos[1]} className='images' style={{ width: '100%', height: '30%', borderRadius: '.3rem' }} />
-                                    <img src={project.photos[2]} className='images' style={{ width: '100%', height: '30%', borderRadius: '.3rem' }} />
-                                    <img src={project.photos[3]} className='images' style={{ width: '100%', height: '30%', borderRadius: '.3rem' }} />
-                                </div>
-                            </section>
-                            <section className='tech-section'>
-                                <h4 className='techHeading'>Technologies used:</h4>
-                                <div style={{ display: 'flex' }}>
-                                    {project.tech.map(tech => (<div key={tech} className='tech'>{tech}</div>))}
-                                </div>
-                            </section>
-                        </section>
-                        <section className='project-right'>
-                            <h2 className='color-div' >
-                                <div className='logo' style={{ backgroundColor: '#F4F4F4', width: '10%' }}></div>
-                                <div style={{ backgroundColor: project.colors[0], width: '40.9%' }} className='logo'></div>
-                                <div style={{ backgroundColor: project.colors[1], width: '14.7%' }} className='logo'></div>
-                                <div style={{ backgroundColor: project.colors[2], width: '14.7%' }} className='logo'></div>
-                                <div style={{ backgroundColor: project.colors[3], width: '15%' }} className='logo'></div>
-                            </h2>
-                            <div className='project-description'>Role: {project.role}</div>
-                            <p className='project-description1'>{project.description}</p>
-                            <div className='button-div'>
-                                <div className='vd-button' ><a className='visit directly' style={{ color: '#004DC0', textDecoration: 'none' }} target="_blank" href={project.URL[0]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Directly</a></div>
-                                <div className='gh-button' ><a className='visit github' style={{ color: 'white', textDecoration: 'none' }} target="_blank" href={project.URL[1]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Github</a></div>
+        <div style={{ color: "#51595F" }}>
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+
+            >
+                <div className='exit-button'>
+                    <Exit color="secondary" style={{}} onClick={closeModal}><FontAwesomeIcon className="fas fa-camera fa-2x" icon={faTimesCircle} /></Exit>
+                </div>
+                <div className="main-project-div">
+                    <section style={{ padding: "1rem" }}>
+                        <div style={{ fontWeight: "bold", paddingBottom: ".5rem", color: "#51595F" }}>{myProjects[currentIndex].name}</div>
+                        <div style={{ paddingBottom: ".7rem", color: "#51595F" }}>{myProjects[currentIndex].subtitle}</div>
+                        <img className="project-image" src={myProjects[currentIndex].photos[0]} />
+                        <section className='tech-section'>
+                            <h4 className='techHeading'>Technologies used:</h4>
+                            <div style={{ display: 'flex' }}>
+                                {projects[currentIndex].tech.map(tech => (<div key={tech} style={{ color: "#51595F" }} className='tech'>{tech}</div>))}
                             </div>
                         </section>
-                    </div>
-                ))}
-            </div>
+                    </section>
+                    <section style={{ padding: "1rem" }}>
+                        <div className='color-div' >
+                            <div className='logo'></div>
+                            <div style={{ backgroundColor: myProjects[currentIndex].colors[0], width: '40.9%' }} className='logo'></div>
+                            <div style={{ backgroundColor: myProjects[currentIndex].colors[1], width: '14.7%' }} className='logo'></div>
+                            <div style={{ backgroundColor: myProjects[currentIndex].colors[2], width: '14.7%' }} className='logo'></div>
+                            <div style={{ backgroundColor: myProjects[currentIndex].colors[3], width: '15%' }} className='logo'></div>
+                        </div>
+                        <div style={{ height: "70%", display: "flex", flexDirection: "column", paddingTop: ".5rem" }}>
+                            <div className='project-description' >Role: {myProjects[currentIndex].role}</div>
+                            <div className='project-description1'>{myProjects[currentIndex].description}</div>
+                            <div className='button-div'>
+                                <Button variant="outlined" color="primary"><a className='visit directly' style={{ color: '#004DC0', textDecoration: 'none' }} target="_blank" href={myProjects[currentIndex].URL[0]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Directly</a></Button>
+                                <Button variant="outlined" color="primary"><a className='visit github' style={{ color: '#004DC0', textDecoration: 'none' }} target="_blank" href={myProjects[currentIndex].URL[1]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Github</a></Button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div className="switcher">
+                    <Button disabled={currentIndex === 0 ? true : false} onClick={() => setCurrentIndex(currentIndex - 1)}><FontAwesomeIcon className="fas fa-camera fa-3x" icon={faArrowCircleLeft} /></Button>
+                    <div>{currentIndex + 1} of {myProjects.length}</div>
+                    <Button disabled={currentIndex === 1 ? true : false} onClick={() => setCurrentIndex(currentIndex + 1)}><FontAwesomeIcon className="fas fa-camera fa-3x" icon={faArrowCircleRight} /></Button>
+                </div>
+            </Modal>
         </div>
-    )
+    );
 }
 
-export default Projects; 
+export default Pros;
