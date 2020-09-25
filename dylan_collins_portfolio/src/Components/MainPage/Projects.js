@@ -28,6 +28,7 @@ const Exit = styled(Button)({
 
 
 const Pros = ({ setIsOpen, modalIsOpen }) => {
+
     const [myProjects, setProjects] = useState(projects);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -47,7 +48,7 @@ const Pros = ({ setIsOpen, modalIsOpen }) => {
                     <Exit color="secondary" style={{}} onClick={closeModal}><FontAwesomeIcon className="fas fa-camera fa-2x" icon={faTimesCircle} /></Exit>
                 </div>
                 <div className="main-project-div">
-                    <section style={{ padding: "1rem" }}>
+                    <section className="left-project">
                         <div style={{ fontWeight: "bold", paddingBottom: ".5rem", color: "#51595F" }}>{myProjects[currentIndex].name}</div>
                         <div style={{ paddingBottom: ".7rem", color: "#51595F" }}>{myProjects[currentIndex].subtitle}</div>
                         <img className="project-image" src={myProjects[currentIndex].photos[0]} />
@@ -58,7 +59,7 @@ const Pros = ({ setIsOpen, modalIsOpen }) => {
                             </div>
                         </section>
                     </section>
-                    <section style={{ padding: "1rem" }}>
+                    <section className="right-project">
                         <div className='color-div' >
                             <div className='logo'></div>
                             <div style={{ backgroundColor: myProjects[currentIndex].colors[0], width: '40.9%' }} className='logo'></div>
@@ -73,6 +74,12 @@ const Pros = ({ setIsOpen, modalIsOpen }) => {
                                 <Button variant="outlined" color="primary"><a className='visit directly' style={{ color: '#004DC0', textDecoration: 'none' }} target="_blank" href={myProjects[currentIndex].URL[0]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Directly</a></Button>
                                 <Button variant="outlined" color="primary"><a className='visit github' style={{ color: '#004DC0', textDecoration: 'none' }} target="_blank" href={myProjects[currentIndex].URL[1]}><FontAwesomeIcon icon={faExternalLinkAlt} /> Visit Github</a></Button>
                             </div>
+                        </div>
+                    </section>
+                    <section className='tech-section tech2'>
+                        <h4 className='techHeading'>Technologies used:</h4>
+                        <div style={{ display: 'flex' }}>
+                            {projects[currentIndex].tech.map(tech => (<div key={tech} style={{ color: "#51595F" }} className='tech'>{tech}</div>))}
                         </div>
                     </section>
                 </div>

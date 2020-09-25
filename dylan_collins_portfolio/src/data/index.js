@@ -47,7 +47,7 @@ export const projects = [
             "React",
             "CSS",
             "Vercel",
-            "Git", 
+            "Git",
             "Github"
         ]
     }
