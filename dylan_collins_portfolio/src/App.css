@@ -490,4 +490,8 @@
   .div-resume{
     left: 25vw
   }
+  .project-image{
+    width: 300px;
+    height: 200px;
+  }
 }
