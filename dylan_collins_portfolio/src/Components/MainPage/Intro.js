@@ -1,5 +1,5 @@
 import React from 'react';
-import dylan from '../../Images/Dylan.png';
+import dylan from '../../Images/Dylan_new.jpeg';
 
 const Intro = () => {
     return (
